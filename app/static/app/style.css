@@ -1,0 +1,281 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #242323;
+    display: flex;
+    min-height: 100vh; 
+    flex-direction: column;
+    margin: 0;
+}
+
+.content {
+    flex: 1;
+    padding: 50px 0;
+    text-align: center;
+}
+
+/*Footer*/
+footer {
+    background-color: #fd9c64;
+    color: #fff;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+/*Header*/
+header {
+    background-color: #fd9c64;
+    color: #fff;
+    padding: 10px 0;
+}
+
+#logo {
+    float: left;
+    font-size: 1.5em;
+    margin-left: 4em;
+}
+
+nav {
+    float: right;
+}
+
+.nav-links {
+    list-style-type: none;
+    margin: 0;
+    margin-right: 4em;
+    padding: 0;
+}
+
+.nav-links li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.nav-links li a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: inline-block;
+    transition: background-color 0.3s;
+}
+
+.nav-links li a:hover {
+    background-color: #f6ac81;
+}
+
+/*Content*/
+.content {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.content h1 {
+    font-size: 2.5em;
+    color: #fd9c64;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.content p {
+    font-size: 1.2em;
+    color: #333333;
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* Add place Form */
+.form-container {
+    background-color: #fd9c64; 
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    max-width: 500px;
+    margin: 30px auto;
+}
+
+.form-container h1 {
+    color: #242323; 
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-fields p {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-fields label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #242323;
+}
+
+.form-fields input,
+.form-fields textarea,
+.form-fields select {
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+}
+
+.form-fields input:focus,
+.form-fields textarea:focus,
+.form-fields select:focus {
+    outline: none;
+    border-color: #fd9c64;
+    box-shadow: 0 0 5px rgba(253, 156, 100, 0.5);
+}
+
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    background-color: #fd9c64;
+    color: #fff;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: 10px;
+}
+
+.btn-submit:hover {
+    background-color: #f6ac81;
+}
+
+/* Button for suggesting places*/
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #fff;
+    background-color: #fd9c64;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+}
+
+.btn:hover {
+    background-color: #f6ac81;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+.btn:active {
+    transform: scale(0.98);
+}
+
+/*List of places*/
+.places-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.place-card {
+    background-color: #fff3e0;
+    border: 1px solid #fd9c64;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.place-card:hover {
+    transform: translateY(-5px);
+}
+
+.place-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.place-info {
+    padding: 15px;
+    color: #242323;
+}
+
+.place-info a {
+    display: block;
+    margin-bottom: 10px;
+    color: #fd9c64;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+.place-info a:hover {
+    text-decoration: underline;
+}
+
+.place-info p {
+    margin: 5px 0;
+    font-size: 0.9rem;
+}
+
+/*Place Page*/
+.place-page-wrapper {
+    display: block;
+    margin: 40px auto;
+    max-width: 1000px;
+    padding: 20px;
+}
+
+.place-page {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: #ffffff;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.place-page img {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.place-page-info {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.place-page-info h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    color: #333333;
+}
+
+.place-page-info p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #555555;
+}
+
+.place-page-info strong {
+    color: #222222;
+}
