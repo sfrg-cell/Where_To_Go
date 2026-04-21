@@ -1,0 +1,22 @@
+{% extends 'app/index.html' %}
+{% load static %}
+
+{% block content %}
+    {% if place %}
+        <div class="place-page-wrapper">
+            <div class="place-page">
+                <img src="{% static 'app/cafe.jpg' %}" alt="{{ place.name }}">
+                <div class="place-page-info">
+                    <h2>{{ place.name }}</h2>
+                    <p><strong>Локація:</strong> {{ place.location }}</p>
+                    <p><strong>Тип місця:</strong> {{ place.place_type }}</p>
+                    <p><strong>Рейтинг:</strong> {{ place.rating }}⭐</p>
+                    <p><strong>Опис:</strong> {{ place.description }}</p>
+                    <p><strong>Дата створення:</strong>{{ place.created_at }}</p>
+                </div>
+            </div>
+        </div>
+    {% else %}
+        <p>"Місце не знайдено 😢"</p>
+    {% endif %}
+{% endblock %}

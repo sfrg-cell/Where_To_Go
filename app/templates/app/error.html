@@ -1,0 +1,10 @@
+{% extends 'app/index.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <h1>😢 Немає місць для вибору</h1>
+    <p>Спробуй додати нове місце, щоб його можна було обрати випадково.</p>
+    <a href="{% url 'app:add_new_place' %}" class="btn">Додати місце</a>
+</div>
+{% endblock %}

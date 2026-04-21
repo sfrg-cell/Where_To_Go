@@ -1,0 +1,35 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Куди піти?</title>
+    <link rel="stylesheet" href="{% static 'app/style.css' %}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div id="logo">Куди піти? ☕️</div>
+                <nav>
+                    <ul class="nav-links">
+                        <li><a class="active" href="{% url 'app:home' %}">Головна</a></li>
+                        <li><a href="{% url 'app:list_of_places' %}">Список місць</a></li>
+                        <li><a href="{% url 'app:add_new_place' %}">Додати місце</a></li>
+                    </ul>
+                </nav>
+        </div>
+    </header>
+    <section class="content">
+        {% block content %}
+
+        {% endblock %}
+    </section>
+    <footer>
+        <div class="container">
+            <div>This site is made by Havryliuk Ioanna on 14th of September 2025</div>
+        </div>
+    </footer>
+</body>
+</html>
